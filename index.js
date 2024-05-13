@@ -11,7 +11,7 @@ const translations = {
 };
 
 function localize(strings, ...keys) {
-    const language = "fr";
+    
     const translation = translations[language];
     
     let result = '';
@@ -43,11 +43,10 @@ function highlightKeywords(template, keywords) {
 }
 
 const keywords = ["JavaScript", "template", "tagged"];
-const template = "Learn ${0} tagged templates to create custom ${1} literals for ${2} manipulation.";
+const template = `Learn ${keywords[0]} tagged templates to create custom ${keywords[1]} literals for ${keywords[2]} manipulation.`;
 const highlighted = highlightKeywords(template, keywords);
 
 console.log(highlighted, 'task2');
-
 
 //Task 3: Multiline Tagged Template
 function multiline(strings, ...values) {
